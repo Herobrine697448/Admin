@@ -12,13 +12,6 @@ StarterGui:SetCore("SendNotification", {
     Duration = 10
 })
 
--- NOTIFICATION 2
-StarterGui:SetCore("SendNotification", {
-    Title = "NOTIFICATION",
-    Text = "Cant Be Detected By Anticheat (FE)",
-    Duration = 10
-})
-
 -- ULTIMATE TEXT
 local ulttext = gui.ScreenGui.MagicHealth.TextLabel
 ulttext.Text = "HEAVENLY PUNISHMENT"
