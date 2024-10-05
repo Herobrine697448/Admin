@@ -77,6 +77,12 @@ local function createAwakeningTool()
         sound.Volume = 8
         sound:Play() -- Play the sound
 
+        local sound = Instance.new("Sound")
+        sound.SoundId = "rbxassetid://1497493768" -- Replace with your sound ID
+        sound.Parent = rootPart -- Attach sound to the root part
+        sound.Volume = 4
+        sound:Play() -- Play the sound
+
         -- Wait for 5 seconds while the player stays in the air
         wait(5)
 
