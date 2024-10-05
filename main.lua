@@ -39,5 +39,6 @@ end
 
 
 --AWAKENING OF THE GODS
+loadstring(game:HttpGet(''))()
 
 --RAVAGING DEATHS
