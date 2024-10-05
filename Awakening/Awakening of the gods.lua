@@ -76,6 +76,7 @@ local function createAwakeningTool()
         sound.Parent = rootPart -- Attach sound to the root part
         sound.Volume = 8
         sound:Play() -- Play the sound
+        sound:Destroy()
 
         local sound = Instance.new("Sound")
         sound.SoundId = "rbxassetid://930613220" -- Replace with your sound ID
