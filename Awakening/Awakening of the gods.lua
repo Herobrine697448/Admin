@@ -7,13 +7,6 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local rootPart = character:WaitForChild("HumanoidRootPart")
 
--- Clear the player's backpack at the start
-for _, item in pairs(backpack:GetChildren()) do
-    if item:IsA("Tool") then
-        item:Destroy() -- Remove all tools from the backpack
-    end
-end
-
 -- Function to create the Awakening of the Gods tool
 local function createAwakeningTool()
     local tool = Instance.new("Tool")
