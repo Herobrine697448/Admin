@@ -7,6 +7,10 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local rootPart = character:WaitForChild("HumanoidRootPart")
 
+-- Cooldown variable
+local isOnCooldown = false
+local cooldownTime = 60 -- Cooldown time in seconds
+
 -- Function to create the Awakening of the Gods tool
 local function createAwakeningTool()
     local tool = Instance.new("Tool")
@@ -16,6 +20,15 @@ local function createAwakeningTool()
 
     -- Tool activated event
     tool.Activated:Connect(function()
+        -- Check if the tool is on cooldown
+        if isOnCooldown then
+            print("The tool is on cooldown. Please wait before using it again.")
+            return
+        end
+        
+        -- Set cooldown
+        isOnCooldown = true
+        
         -- Send chat message before teleporting
         local message = "I AM GOD"
         local channel = "All"
@@ -74,6 +87,11 @@ local function createAwakeningTool()
         -- Stop the animation when returning
         animTrack:Stop()
         sound:Destroy() -- Clean up sound instance
+
+        -- Start cooldown timer
+        wait(cooldownTime)
+        isOnCooldown = false -- Reset cooldown
+        print("The tool is ready to use again.")
     end)
 
     -- Parent the tool to the player's Backpack
