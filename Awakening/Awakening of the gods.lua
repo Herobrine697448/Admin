@@ -7,17 +7,24 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local rootPart = character:WaitForChild("HumanoidRootPart")
 
+-- Clear the player's backpack at the start
+for _, item in pairs(backpack:GetChildren()) do
+    if item:IsA("Tool") then
+        item:Destroy() -- Remove all tools from the backpack
+    end
+end
+
 -- Function to create the Awakening of the Gods tool
 local function createAwakeningTool()
     local tool = Instance.new("Tool")
     tool.Name = "Awakening of the Gods"
     tool.RequiresHandle = false -- Tool doesn't require a handle
     tool.CanBeDropped = false -- Disable dropping tool
-    
+
     -- Tool activated event
     tool.Activated:Connect(function()
         -- Send chat message before teleporting
-        local message = "Perish You Annoying Brat!"
+        local message = "I AM GOD"
         local channel = "All"
         local c = {message, channel}
 
@@ -57,6 +64,13 @@ local function createAwakeningTool()
             warn("Failed to play animation: " .. animErr) -- Log any animation errors
         end
 
+        -- Create and play the sound
+        local sound = Instance.new("Sound")
+        sound.SoundId = "rbxassetid://1497493768" -- Replace with your sound ID
+        sound.Parent = rootPart -- Attach sound to the root part
+        sound.Volume = 8
+        sound:Play() -- Play the sound
+
         -- Wait for 5 seconds while the player stays in the air
         wait(5)
 
@@ -66,6 +80,7 @@ local function createAwakeningTool()
 
         -- Stop the animation when returning
         animTrack:Stop()
+        sound:Destroy() -- Clean up sound instance
     end)
 
     -- Parent the tool to the player's Backpack
