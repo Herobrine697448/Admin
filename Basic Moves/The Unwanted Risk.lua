@@ -2,9 +2,9 @@
         local TS = game:GetService("TweenService")
         local RunService = game:GetService("RunService")
         
-        local FinalDamage = 75
-        local sped = 200
-        local candash = true
+        local FinalDamage = 200
+        local speed = 200
+        local candash = false
         local hit = 0
         local Character = p.Character
         local Humanoid = Character:WaitForChild("Humanoid")
@@ -1166,13 +1166,11 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363383992 -- Correct sound ID
-        
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
-        sound.Name = "Audio/kj-20-20-20_cutscene_music"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
+        sound.Name = "Audio/Cutscene/Kill/Music"
+        sound.SoundId = "rbxassetid://132108313055473"
+        sound.Volume = 3
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
         
