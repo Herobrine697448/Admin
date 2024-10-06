@@ -3,7 +3,7 @@
         local RunService = game:GetService("RunService")
         
         local FinalDamage = 200
-        local speed = 200
+        local sped = 200
         local candash = false
         local hit = 0
         local Character = p.Character
@@ -1195,58 +1195,6 @@
         
         -- Play the sound
         sound:Play()
-        
-        local final2 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Origin:Clone()
-        final2.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final2:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        local final3 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final3.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final3:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        local final4 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final4.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final4:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        local final5 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final5.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final5:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final6.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final6:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
-            spawn(function()
-            wait(15)
-            local targetName = "thespeedthingunderultik"
-            for i = 1, 15 do
-                character:WaitForChild("HumanoidRootPart").Anchored = false
-            character:WaitForChild("Humanoid").AutoRotate = true
-            wait(1)
-            end
             
         -- Workspace'teki tÃƒÂ¼m objeleri dÃƒÂ¶ner
         for _, obj in pairs(workspace:GetDescendants()) do
@@ -1284,7 +1232,7 @@
             VictimAnim.AnimationId = "rbxassetid://0"
             Victim:Play()
             workspace.Dropkick_SFX:Destroy()
-            workspace.Dropkick_Miss:Destroy()
+            workspace.TheUnwantedRiskSound:Destroy()
             
             local player = game.Players.LocalPlayer
             local character = player.Character or player.CharacterAdded:Wait()
@@ -1304,17 +1252,6 @@
             character:WaitForChild("HumanoidRootPart").CFrame = weakDummyHRP.CFrame * rotation * offset
             character:WaitForChild("HumanoidRootPart").Anchored = true
             character:WaitForChild("Humanoid").AutoRotate = false
-        
-        wait(1.4)
-        
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
         
         
         wait(0.6)
