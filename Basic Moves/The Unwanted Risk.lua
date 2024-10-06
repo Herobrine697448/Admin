@@ -51,7 +51,7 @@
         sound.Parent = workspace
         
         -- Play the sound
-        sound:Play(l
+        sound:Play()
         
         Humanoid.WalkSpeed = 0
         local p = game.Players.LocalPlayer
