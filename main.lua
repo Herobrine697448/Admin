@@ -8,7 +8,7 @@ local gui = player:WaitForChild("PlayerGui")
 -- NOTIFICATION 1
 StarterGui:SetCore("SendNotification", {
     Title = "NOTIFICATION",
-    Text = "Character  ",
+    Text = "Character Made By @Herobrine",
     Duration = 10
 })
 
