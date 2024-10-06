@@ -2,7 +2,7 @@
         local TS = game:GetService("TweenService")
         local RunService = game:GetService("RunService")
         
-        local FinalDamage = 75
+        local FinalDamage = 2000
         local sped = 200
         local candash = true
         local hit = 0
@@ -1087,8 +1087,6 @@
             
             local p = game.Players.LocalPlayer
             local Thrown = workspace
-            local RS = game:GetService("ReplicatedStorage")
-            local background = RS.Resources.KJEffects["202020BACKSCREEN"]:Clone()
             
             local Humanoid = p.Character:WaitForChild("Humanoid")
             local RootPart = p.Character:WaitForChild("HumanoidRootPart")
@@ -1100,13 +1098,6 @@
             
             local p = Players.LocalPlayer
             local playerGui = p:WaitForChild("PlayerGui")
-            
-            -- Clone the ImpactFrames from ReplicatedStorage to PlayerGui
-            local replicatedGui = ReplicatedStorage:WaitForChild("Resources"):WaitForChild("KJEffects"):WaitForChild("Text")
-            local clonedGui2 = replicatedGui:Clone()
-            clonedGui2.Parent = playerGui
-            
-            local TextFrame = clonedGui2
             
             -- Wait for 0.5 seconds
             wait(0.5)
@@ -1145,12 +1136,7 @@
             
             -- Call the function to start the frame sequence
             showFrames2()
-            
-            clonedGui1:Destroy()
-            
-            clonedGui2:Destroy()
-            
-            background:Destroy()
+
         end)
         local soundId = 17363377920 -- Correct sound ID
         
@@ -1287,7 +1273,6 @@
             local Victim = hitHumanoid:LoadAnimation(VictimAnim)
             VictimAnim.AnimationId = "rbxassetid://0"
             Victim:Play()
-            workspace.Dropkick_SFX:Destroy()
             workspace.Dropkick_Miss:Destroy()
             
             local player = game.Players.LocalPlayer
@@ -1390,7 +1375,6 @@
             candash = false
             hitbox:Destroy()
             Humanoid.WalkSpeed = 16
-            workspace.Dropkick_SFX:Destroy()
             workspace.Dropkick_Miss:Destroy()
             -- TÃƒÂ¼m 'speedlines' adÃ„Â±ndaki parÃƒÂ§alarÃ„Â± bulup silen script
         local targetName = "thespeedthingunderultik"
