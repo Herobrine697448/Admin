@@ -37,13 +37,11 @@
         AnimAnim.AnimationId = "rbxassetid://0"
         Anim:Play()
         
-        local soundId = 17429233290 -- Correct sound ID
-        
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
         sound.Name = "Dropkick_Miss"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
+        sound.SoundId = "rbxassetid://2496367477"
+        sound.Volume = 5
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
         
