@@ -1168,7 +1168,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 132108313055473 -- Correct sound ID
+        local soundId = 1332644289 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1221,21 +1221,6 @@
                     child:Emit(1) -- Emit 20 particles
                 end
             end
-        local final5 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final5.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final5:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
-        final6.Parent = game.Players.LocalPlayer.Character["Right Arm"]
-            for _, child in ipairs(final6:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(1) -- Emit 20 particles
-                end
-            end
-        
         local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
         launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
             for _, child in ipairs(launch1:GetChildren()) do
