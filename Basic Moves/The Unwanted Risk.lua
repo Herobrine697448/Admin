@@ -37,27 +37,11 @@
         AnimAnim.AnimationId = "rbxassetid://0"
         Anim:Play()
         
-        local soundId = 17429233290 -- Correct sound ID
+        local soundId = 2496367477 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
-        sound.Name = "Dropkick_Miss"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
-        sound.Pitch = 1.0 -- Pitch set to 1.0
-        sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
-        
-        -- Parent the sound to Workspace
-        sound.Parent = workspace
-        
-        -- Play the sound
-        sound:Play()
-        
-        local soundId = 17356346310 -- Correct sound ID
-        
-        -- Create a new Sound instance
-        local sound = Instance.new("Sound")
-        sound.Name = "Dropkick_SFX"
+        sound.Name = "TheUnwantedRiskSound"
         sound.SoundId = "rbxassetid://" .. soundId
         sound.Volume = 1
         sound.Pitch = 1.0 -- Pitch set to 1.0
@@ -1170,11 +1154,11 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363374089 -- Correct sound ID
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
-        sound.Name = "Audio/kj-20-20-20_victim_reedit"
+        sound.Name = "Audio/Hit"
         sound.SoundId = "rbxassetid://" .. soundId
         sound.Volume = 1
         sound.Pitch = 1.0 -- Pitch set to 1.0
@@ -1273,7 +1257,7 @@
             local Victim = hitHumanoid:LoadAnimation(VictimAnim)
             VictimAnim.AnimationId = "rbxassetid://0"
             Victim:Play()
-            workspace.Dropkick_Miss:Destroy()
+            workspace.TheUnwantedRiskSound:Destroy()
             
             local player = game.Players.LocalPlayer
             local character = player.Character or player.CharacterAdded:Wait()
@@ -1343,7 +1327,7 @@
         wait(1.4)
         
         
-        local soundId = 17419337758 -- Correct sound ID
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
