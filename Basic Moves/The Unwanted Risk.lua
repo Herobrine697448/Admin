@@ -1152,7 +1152,7 @@
             
             background:Destroy()
         end)
-        local soundId = 17363377920 -- Correct sound ID
+        local soundId = 1332644289 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1184,7 +1184,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363374089 -- Correct sound ID
+        local soundId = 1332644289 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
