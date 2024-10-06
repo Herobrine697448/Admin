@@ -43,7 +43,7 @@
         local sound = Instance.new("Sound")
         sound.Name = "Dropkick_Miss"
         sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
+        sound.Volume = 7
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
         
@@ -52,8 +52,6 @@
         
         -- Play the sound
         sound:Play()
-        
-        local soundId = 17356346310 -- Correct sound ID
         
         Humanoid.WalkSpeed = 0
         local p = game.Players.LocalPlayer
@@ -173,7 +171,7 @@
                 -- Run the followPlayer function every frame
                 game:GetService("RunService").RenderStepped:Connect(followPlayer)
             else
-                warn("Part thespeedthingunderultik not found inside speedlinesandstuff.")
+                warn("Failed to Render RenderStepped:Connect(followPlayer)
             end
         end
         
@@ -229,7 +227,7 @@
                 -- Run the followPlayer function every frame
                 game:GetService("RunService").RenderStepped:Connect(followPlayer)
             else
-                warn("Part thespeedthingunderultik not found inside speedlinesandstuff.")
+                warn("Failed RenderStepped:Connect(followPlayer)")
             end
         end
         
@@ -599,10 +597,6 @@
             end
         end
         
-        
-        -- Setup particles in the duplicated part
-        setupParticles(speedlinesClone)
-        
         -- Run the function in a separate thread
         spawn(updateSpeedlinesPosition)
         
@@ -668,11 +662,36 @@
                 wait(0.1) -- Adjust the wait time as needed
             end
         end
+        -- Run the function in a separate thread
+        spawn(updateSpeedlinesPosition)
         
+        -- Wait for the player to load
+        local player = Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local rootPart = character:WaitForChild("HumanoidRootPart")
         
-        -- Setup particles in the duplicated part
-        setupParticles(speedlinesClone)
+        -- Check for Resources folder in ReplicatedStorage
+        local resourcesFolder = ReplicatedStorage:WaitForChild("Resources")
         
+        -- Check for KJEffects folder inside Resources
+        local kjEffectsFolder = resourcesFolder:WaitForChild("KJEffects")
+        
+        -- Check for speedlines part inside KJEffects
+        local speedlinesPart = kjEffectsFolder:WaitForChild("speedlines")
+        
+        -- Duplicate the speedlines part
+        local speedlinesClone = speedlinesPart:Clone()
+        
+        -- Put the dupicate in Workspace
+        speedlinesClone.Parent = Workspace
+        
+        -- Function to update the position of the speedlines clone to follow the player
+        local function updateSpeedlinesPosition()
+            while true do
+                speedlinesClone.CFrame = rootPart.CFrame
+                wait(0.1) -- Adjust the wait time as needed
+            end
+        end
         -- Run the function in a separate thread
         spawn(updateSpeedlinesPosition)
         
@@ -703,46 +722,6 @@
                 wait(0.1) -- Adjust the wait time as needed
             end
         end
-        
-        
-        -- Setup particles in the duplicated part
-        setupParticles(speedlinesClone)
-        
-        -- Run the function in a separate thread
-        spawn(updateSpeedlinesPosition)
-        
-        -- Wait for the player to load
-        local player = Players.LocalPlayer
-        local character = player.Character or player.CharacterAdded:Wait()
-        local rootPart = character:WaitForChild("HumanoidRootPart")
-        
-        -- Check for Resources folder in ReplicatedStorage
-        local resourcesFolder = ReplicatedStorage:WaitForChild("Resources")
-        
-        -- Check for KJEffects folder inside Resources
-        local kjEffectsFolder = resourcesFolder:WaitForChild("KJEffects")
-        
-        -- Check for speedlines part inside KJEffects
-        local speedlinesPart = kjEffectsFolder:WaitForChild("speedlines")
-        
-        -- Duplicate the speedlines part
-        local speedlinesClone = speedlinesPart:Clone()
-        
-        -- Put the duplicate in Workspace
-        speedlinesClone.Parent = Workspace
-        
-        -- Function to update the position of the speedlines clone to follow the player
-        local function updateSpeedlinesPosition()
-            while true do
-                speedlinesClone.CFrame = rootPart.CFrame
-                wait(0.1) -- Adjust the wait time as needed
-            end
-        end
-        
-        
-        -- Setup particles in the duplicated part
-        setupParticles(speedlinesClone)
-        
         -- Run the function in a separate thread
         spawn(updateSpeedlinesPosition)
         
@@ -1081,9 +1060,6 @@
             
             local p = Players.LocalPlayer
             local playerGui = p:WaitForChild("PlayerGui")
-            
-            -- Wait for 0.5 seconds
-            wait(0.5)
             
             -- Function to handle the visibility of frames
             local function showFrames2()
