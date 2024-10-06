@@ -37,7 +37,7 @@
         AnimAnim.AnimationId = "rbxassetid://0"
         Anim:Play()
         
-        local soundId = 17429233290 -- Correct sound ID
+        local soundId = 2496367477 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1168,7 +1168,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363374089 -- Correct sound ID
+        local soundId = 132108313055473 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1319,7 +1319,7 @@
         
         wait(0.7)        
         
-        local soundId = 17419337758 -- Correct sound ID
+        local soundId = 132108313055473 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
