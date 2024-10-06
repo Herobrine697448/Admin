@@ -2,7 +2,7 @@
         local TS = game:GetService("TweenService")
         local RunService = game:GetService("RunService")
         
-        local FinalDamage = 75
+        local FinalDamage = 2000
         local sped = 200
         local candash = true
         local hit = 0
@@ -42,22 +42,6 @@
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
         sound.Name = "Dropkick_Miss"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
-        sound.Pitch = 1.0 -- Pitch set to 1.0
-        sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
-        
-        -- Parent the sound to Workspace
-        sound.Parent = workspace
-        
-        -- Play the sound
-        sound:Play()
-        
-        local soundId = 17356346310 -- Correct sound ID
-        
-        -- Create a new Sound instance
-        local sound = Instance.new("Sound")
-        sound.Name = "Dropkick_SFX"
         sound.SoundId = "rbxassetid://" .. soundId
         sound.Volume = 1
         sound.Pitch = 1.0 -- Pitch set to 1.0
@@ -1152,7 +1136,7 @@
             
             background:Destroy()
         end)
-        local soundId = 17363377920 -- Correct sound ID
+        local soundId = 132108313055473 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1168,7 +1152,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363383992 -- Correct sound ID
+        local soundId = 132108313055473 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1331,32 +1315,9 @@
                     child:Emit(3) -- Emit 20 particles
                 end
             end
+       
         
-        
-        wait(0.5)
-        
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
-        
-        
-        wait(0.7)
-        
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
-        wait(1.4)
-        
+        wait(0.7)        
         
         local soundId = 17419337758 -- Correct sound ID
         
