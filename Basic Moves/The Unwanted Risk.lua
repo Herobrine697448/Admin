@@ -1168,7 +1168,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 8559937783 -- Correct sound ID
+        local soundId =  8559937783 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1184,7 +1184,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 8559937783 -- Correct sound ID
+        local soundId =  -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
