@@ -2,7 +2,7 @@
         local TS = game:GetService("TweenService")
         local RunService = game:GetService("RunService")
         
-        local FinalDamage = 75
+        local Damage = 2000
         local sped = 200
         local candash = true
         local hit = 0
@@ -37,7 +37,7 @@
         AnimAnim.AnimationId = "rbxassetid://0"
         Anim:Play()
         
-        local soundId = 17429233290 -- Correct sound ID
+        local soundId = 2496367477 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -54,20 +54,6 @@
         sound:Play()
         
         local soundId = 17356346310 -- Correct sound ID
-        
-        -- Create a new Sound instance
-        local sound = Instance.new("Sound")
-        sound.Name = "Dropkick_SFX"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
-        sound.Pitch = 1.0 -- Pitch set to 1.0
-        sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
-        
-        -- Parent the sound to Workspace
-        sound.Parent = workspace
-        
-        -- Play the sound
-        sound:Play()
         
         Humanoid.WalkSpeed = 0
         local p = game.Players.LocalPlayer
@@ -106,7 +92,7 @@
         local ReplicatedStorage = game:GetService("ReplicatedStorage")
         local Workspace = game:GetService("Workspace")
         
-        -- Wait for the player to load
+      -- Wait for the player to load
         local player = Players.LocalPlayer
         local character = player.Character or player.CharacterAdded:Wait()
         local rootPart = character:WaitForChild("HumanoidRootPart")
@@ -1086,27 +1072,15 @@
             showFrames1()
             
             local p = game.Players.LocalPlayer
-            local Thrown = workspace
-            local RS = game:GetService("ReplicatedStorage")
-            local background = RS.Resources.KJEffects["202020BACKSCREEN"]:Clone()
             
             local Humanoid = p.Character:WaitForChild("Humanoid")
             local RootPart = p.Character:WaitForChild("HumanoidRootPart")
-            background.Parent = Thrown
-            background.CFrame = RootPart.CFrame * CFrame.new(0, -2.6, -180)
             
             local Players = game:GetService("Players")
             local ReplicatedStorage = game:GetService("ReplicatedStorage")
             
             local p = Players.LocalPlayer
             local playerGui = p:WaitForChild("PlayerGui")
-            
-            -- Clone the ImpactFrames from ReplicatedStorage to PlayerGui
-            local replicatedGui = ReplicatedStorage:WaitForChild("Resources"):WaitForChild("KJEffects"):WaitForChild("Text")
-            local clonedGui2 = replicatedGui:Clone()
-            clonedGui2.Parent = playerGui
-            
-            local TextFrame = clonedGui2
             
             -- Wait for 0.5 seconds
             wait(0.5)
@@ -1145,12 +1119,7 @@
             
             -- Call the function to start the frame sequence
             showFrames2()
-            
-            clonedGui1:Destroy()
-            
-            clonedGui2:Destroy()
-            
-            background:Destroy()
+        
         end)
         local soundId = 17363377920 -- Correct sound ID
         
