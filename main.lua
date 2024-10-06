@@ -28,14 +28,6 @@ end
 -- Call the backpack clearing function
 clearBackpack()
 
---AWAKENING OF THE GODS
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Herobrine697448/Admin/refs/heads/main/Awakening/Awakening%20of%20the%20gods.lua'))()
-
-
---RAVAGING DEATHS
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Herobrine697448/Admin/refs/heads/main/Basic%20Moves/Ravaging%20Deaths.lua'))()
-
-
 --THE UNWANTED RISK
 local Tool = Instance.new("Tool")
 Tool.Name = "The Unwanted Risk"
@@ -46,3 +38,12 @@ Tool.Parent = game.Players.LocalPlayer.Backpack
 Tool.Activated:Connect(function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Herobrine697448/Admin/refs/heads/main/Basic%20Moves/The%20Unwanted%20Risk.lua'))()
 end)
+
+
+
+--AWAKENING OF THE GODS
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Herobrine697448/Admin/refs/heads/main/Awakening/Awakening%20of%20the%20gods.lua'))()
+
+
+--RAVAGING DEATHS
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Herobrine697448/Admin/refs/heads/main/Basic%20Moves/Ravaging%20Deaths.lua'))()
