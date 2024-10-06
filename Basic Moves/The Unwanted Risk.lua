@@ -2,9 +2,9 @@
         local TS = game:GetService("TweenService")
         local RunService = game:GetService("RunService")
         
-        local FinalDamage = 75
+        local FinalDamage = 200
         local sped = 200
-        local candash = true
+        local candash = false
         local hit = 0
         local Character = p.Character
         local Humanoid = Character:WaitForChild("Humanoid")
@@ -37,13 +37,11 @@
         AnimAnim.AnimationId = "rbxassetid://0"
         Anim:Play()
         
-        local soundId = 17429233290 -- Correct sound ID
-        
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
-        sound.Name = "Dropkick_Miss"
-        sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
+        sound.Name = "TheUnwantedRiskSound"
+        sound.SoundId = "rbxassetid://2496367477" 
+        sound.Volume = 5
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
         
@@ -1168,12 +1166,10 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 17363383992 -- Correct sound ID
-        
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
-        sound.Name = "Audio/kj-20-20-20_cutscene_music"
-        sound.SoundId = "rbxassetid://" .. soundId
+        sound.Name = "Audio/TheUnwantedSound/Music/Cutscene"
+        sound.SoundId = "rbxassetid://132108313055473" 
         sound.Volume = 1
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
@@ -1391,7 +1387,7 @@
             hitbox:Destroy()
             Humanoid.WalkSpeed = 16
             workspace.Dropkick_SFX:Destroy()
-            workspace.Dropkick_Miss:Destroy()
+            workspace.TheUnwantedRiskSound:Destroy()
             -- TÃƒÂ¼m 'speedlines' adÃ„Â±ndaki parÃƒÂ§alarÃ„Â± bulup silen script
         local targetName = "thespeedthingunderultik"
         
