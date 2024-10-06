@@ -43,7 +43,7 @@
         local sound = Instance.new("Sound")
         sound.Name = "Dropkick_Miss"
         sound.SoundId = "rbxassetid://" .. soundId
-        sound.Volume = 1
+        sound.Volume = 7
         sound.Pitch = 1.0 -- Pitch set to 1.0
         sound.PlaybackSpeed = 1.0 -- Adjusted playback speed
         
@@ -1069,31 +1069,11 @@
             -- Call the function to start the frame sequence
             showFrames1()
             
-            local p = game.Players.LocalPlayer
-            local Thrown = workspace
-            local RS = game:GetService("ReplicatedStorage")
-            local background = RS.Resources.KJEffects["202020BACKSCREEN"]:Clone()
-            
-            local Humanoid = p.Character:WaitForChild("Humanoid")
-            local RootPart = p.Character:WaitForChild("HumanoidRootPart")
-            background.Parent = Thrown
-            background.CFrame = RootPart.CFrame * CFrame.new(0, -2.6, -180)
-            
             local Players = game:GetService("Players")
             local ReplicatedStorage = game:GetService("ReplicatedStorage")
             
             local p = Players.LocalPlayer
             local playerGui = p:WaitForChild("PlayerGui")
-            
-            -- Clone the ImpactFrames from ReplicatedStorage to PlayerGui
-            local replicatedGui = ReplicatedStorage:WaitForChild("Resources"):WaitForChild("KJEffects"):WaitForChild("Text")
-            local clonedGui2 = replicatedGui:Clone()
-            clonedGui2.Parent = playerGui
-            
-            local TextFrame = clonedGui2
-            
-            -- Wait for 0.5 seconds
-            wait(0.5)
             
             -- Function to handle the visibility of frames
             local function showFrames2()
@@ -1126,17 +1106,8 @@
                     end
                 end
             end
-            
-            -- Call the function to start the frame sequence
-            showFrames2()
-            
-            clonedGui1:Destroy()
-            
-            clonedGui2:Destroy()
-            
-            background:Destroy()
-        end)
-        local soundId = 132108313055473 -- Correct sound ID
+  
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1152,7 +1123,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 132108313055473 -- Correct sound ID
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1168,7 +1139,7 @@
         -- Play the sound
         sound:Play()
         
-        local soundId = 132108313055473 -- Correct sound ID
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
@@ -1292,34 +1263,10 @@
             character:WaitForChild("HumanoidRootPart").CFrame = weakDummyHRP.CFrame * rotation * offset
             character:WaitForChild("HumanoidRootPart").Anchored = true
             character:WaitForChild("Humanoid").AutoRotate = false
+           
+            wait(0.7)        
         
-        wait(1.4)
-        
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
-        
-        
-        wait(0.6)
-        
-        
-        local launch1 = game.ReplicatedStorage.Resources.KJEffects["launchup"].launchything:Clone()
-        launch1.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
-            for _, child in ipairs(launch1:GetChildren()) do
-                if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
-                    child:Emit(3) -- Emit 20 particles
-                end
-            end
-       
-        
-        wait(0.7)        
-        
-        local soundId = 132108313055473 -- Correct sound ID
+        local soundId = 1497457250 -- Correct sound ID
         
         -- Create a new Sound instance
         local sound = Instance.new("Sound")
